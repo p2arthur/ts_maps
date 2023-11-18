@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 
-class User {
+export class User {
   private name: string;
   private location: {
     lat: number;
@@ -14,5 +14,3 @@ class User {
     };
   }
 }
-
-export { User };
