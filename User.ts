@@ -15,4 +15,4 @@ class User {
   }
 }
 
-const user = new User();
+export { User };
