@@ -1,6 +1,7 @@
 //Instructions to every other class on how they can be used as argument to 'addMarker'
 interface Mappable {
   location: { lat: number; lng: number };
+  markerContent(): string;
 }
 
 export class CustomMap {
@@ -16,7 +17,7 @@ export class CustomMap {
   }
 
   public addMarker(mappable: Mappable): void {
-    const infoWindowContent = `<div><h2>${mappable.location.lat}</h2><br/></div>`;
+    const infoWindowContent = mappable.markerContent();
 
     const infowindow = new google.maps.InfoWindow({
       content: infoWindowContent,
